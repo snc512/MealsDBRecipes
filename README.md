@@ -18,8 +18,13 @@ Getting Started:
 - Build and run the app using the iOS Simulator or a connected iOS device.
 
 Future Ideas:
+- Add more ways to mock information for full UI/Feature tests 
 - If I were to add many more api calls or access a more secure API, I may consider creating a "Services" directory with the first being a MealDBAPIService for a single isolated location for configurations.
 - Being able to create your own recipes should be possible + you can save them in some cloud data storage
 - If I were to introduce this last step, I would also want there to be users, and then would need to use a formal DB (easiest would be relational with Core Data)
 - With users, there would also be authentication and I believe the easiest way to introduce a simple SSO solution for iOS apps would be via Firebase
-- An AI feature, where you take a photo of ingredients, it then is able to detect how much of each ingredient you have, and then tells you recipe options would be the most fun :) 
+- An AI feature, where you take a photo of ingredients, it then is able to detect how much of each ingredient you have, and then tells you recipe options would be the most fun :)
+
+Demo: 
+https://github.com/snc512/MealsDBRecipes/assets/23483902/f906ca7b-3d39-4143-828b-9925c861a032
+
