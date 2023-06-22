@@ -18,7 +18,7 @@ Getting Started:
 - Build and run the app using the iOS Simulator or a connected iOS device.
 
 Future Ideas:
-- Add more ways to mock information for full UI/Feature tests 
+- Add more detailed/fully fleshed UI/Feature tests 
 - If I were to add many more api calls or access a more secure API, I may consider creating a "Services" directory with the first being a MealDBAPIService for a single isolated location for configurations.
 - Being able to create your own recipes should be possible + you can save them in some cloud data storage
 - If I were to introduce this last step, I would also want there to be users, and then would need to use a formal DB (easiest would be relational with Core Data)
