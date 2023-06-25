@@ -78,14 +78,10 @@ final class RecipeDetailsTest: XCTestCase {
                 },
                 {
                     "idMeal": "98765",
+                    "strMeal": "Recipe",
                     "strMealThumb": "https://www.example.com/pizza.jpg",
                     "strInstructions": "Prepare the dough and add your favorite toppings.",
-                    "strIngredient1": "Flour",
-                    "strMeasure1": "2 cups",
-                    "strIngredient2": "Tomato sauce",
-                    "strMeasure2": "1 cup",
-                    "strIngredient3": "Cheese",
-                    "strMeasure3": "200g"
+                    "strIngredient1": "Flour"
                 }
             ]
         }
