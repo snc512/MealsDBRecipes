@@ -10,12 +10,12 @@ import SwiftUI
 @main
 struct MealDBRecipesApp: App {
     
-    var recipe = RecipesViewModel()
-    
+    @StateObject private var homeViewModel = HomeViewModel()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(recipe)
+                .environmentObject(homeViewModel)
         }
     }
 }

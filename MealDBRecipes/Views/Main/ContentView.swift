@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var viewModel:RecipesViewModel
+    @StateObject private var homeViewModel = HomeViewModel()
+    
     var body: some View {
         TabBar()
             .onAppear{
-                viewModel.getMeals()
+                homeViewModel.loadData()
             }
+            .environmentObject(homeViewModel)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(RecipesViewModel())
+            .environmentObject(HomeViewModel())
     }
 }

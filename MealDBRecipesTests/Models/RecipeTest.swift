@@ -47,7 +47,7 @@ final class RecipeTest: XCTestCase {
         let decoder = JSONDecoder()
 
        // When we are parsing data in which only one of the meals is valid
-        let response = try decoder.decode(RecipesViewModel.MealsResponse.self, from: jsonData)
+        let response = try decoder.decode(MealsDBService.MealsResponse.self, from: jsonData)
         
         let validMeals = response.meals.filter { recipe in
            !recipe.strMeal.isEmpty && !recipe.id.isEmpty && !recipe.strMealThumb.isEmpty
