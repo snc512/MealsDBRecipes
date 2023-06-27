@@ -8,16 +8,12 @@
 import SwiftUI
 
 struct Favorites: View {
-    @EnvironmentObject var viewModel:RecipesViewModel
-    
-    var favorite_recipes: [Recipe] {
-       return viewModel.meals.filter { $0.isFavorite == true }
-   }
+    @EnvironmentObject  private var viewModel:FavoritesViewModel
     
     var body: some View {
         NavigationView{
             ScrollView {
-                RecipeList(recipes: favorite_recipes)
+                RecipeList(recipes: viewModel.filterData())
             }
             .navigationTitle("Favorites")
                 
@@ -29,7 +25,7 @@ struct Favorites: View {
 struct Favorites_Previews: PreviewProvider {
     static var previews: some View {
         Favorites()
-            .environmentObject(RecipesViewModel())
+            .environmentObject(HomeViewModel())
     }
 }
 

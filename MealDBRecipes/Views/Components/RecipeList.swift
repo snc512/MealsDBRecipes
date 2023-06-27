@@ -9,7 +9,8 @@ import SwiftUI
 
 struct RecipeList: View {
     var recipes: [Recipe]
-    @EnvironmentObject var viewModel: RecipesViewModel
+    @EnvironmentObject var homeViewModel: HomeViewModel
+
     @State private var selectedRecipe: Recipe?
 
     var body: some View {
@@ -37,10 +38,11 @@ struct RecipeList: View {
                 .padding(.top)
         }
             .sheet(item: $selectedRecipe) { recipe in
-                RecipeView(recipe: recipe, mealID: recipe.id)
+                Meal(recipe: recipe, mealID: recipe.id)
                     .onDisappear {
                         selectedRecipe = nil  // Reset the selected recipe when the sheet is dismissed
                     }
+                    .environmentObject(MealViewModel(recipe: recipe, homeViewModel: homeViewModel))
             }
         .padding(.horizontal)
     }
@@ -48,8 +50,7 @@ struct RecipeList: View {
 
 struct RecipeList_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = RecipesViewModel()
-        viewModel.getMeals()
+        let viewModel = HomeViewModel()
         
         let recipes: [Recipe] = [
                    Recipe(id: "53049", strMeal: "Apam balik", strMealThumb: "https:\\/\\/www.themealdb.com\\/images\\/media\\/meals\\/adxcbq1619787919.jpg", category: "Dessert", isFavorite: false),

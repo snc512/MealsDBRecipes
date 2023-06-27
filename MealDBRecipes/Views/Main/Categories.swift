@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Categories: View {
-    @EnvironmentObject var recipe:RecipesViewModel
+    @EnvironmentObject var recipe:HomeViewModel
 
     var body: some View {
 
@@ -30,7 +30,7 @@ struct Categories: View {
 
 struct Categories_Previews: PreviewProvider {
     static var previews: some View {
-        let recipe = RecipesViewModel()
+        let recipe = HomeViewModel()
 
         Categories()
             .environmentObject(recipe)

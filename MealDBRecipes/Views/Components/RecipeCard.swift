@@ -54,8 +54,7 @@ struct RecipeCard: View {
 
 struct RecipeCard_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = RecipesViewModel()
-        viewModel.getMeals()
+        let viewModel = HomeViewModel()
         
         let firstRecipe = viewModel.meals.first ?? Recipe(id: "53049", strMeal: "Apam balik", strMealThumb: "https:\\/\\/www.themealdb.com\\/images\\/media\\/meals\\/adxcbq1619787919.jpg", category: "Dessert", isFavorite: false)
 

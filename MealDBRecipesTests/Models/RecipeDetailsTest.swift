@@ -92,7 +92,7 @@ final class RecipeDetailsTest: XCTestCase {
         let decoder = JSONDecoder()
         
         // When
-        let decodedResponse = try! decoder.decode(RecipesViewModel.MealDetailsResponse.self, from: jsonData)
+        let decodedResponse = try! decoder.decode(MealsDBService.MealDetailsResponse.self, from: jsonData)
         let validMealDetails = decodedResponse.meals.filter { mealDetails in
             !mealDetails.strMeal.isEmpty && !mealDetails.id.isEmpty && !mealDetails.strInstructions.isEmpty && !mealDetails.strMeasures.isEmpty && !mealDetails.strIngredients.isEmpty
         }
